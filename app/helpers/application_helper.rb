@@ -5,7 +5,7 @@ module ApplicationHelper
       "Solutions to modernize your business!",
       "Get your business on the internet",
       "Custom web applications mobile friendly",
-      "Create a web presence and increase sale volume"
+      "Create a web presence and increase sales volume"
     ]
     titles[rand(titles.size)]
   end
