@@ -2,7 +2,7 @@
 <div class="flex flex-col md:flex-row">
   <!--First section / left section on desktop (navigation) -->
   <!--###### NEED TO FIX... the bg color doesnt cover all the way if the text overflows screen-->
-  <nav class="flex flex-col items-center bg-red-800 h-screen md:w-96">
+  <nav class="flex flex-col items-center bg-red-800 h-full md:w-5/12">
 
     <!--Container for Profile pic-->
     <div class="pt-16 px-10">
@@ -15,23 +15,39 @@
     </div>
 
     <!--Container for words and stuff-->
-    <div class="flex flex-col items-center px-6">
+    <div class="flex flex-col items-center px-6 pb-10">
       <!--Links-->
       <p class="text-white text-center pt-10">
-      Home | Projects | Example Sites | Articles
+      Home | Client Websites | Example Sites <br>
       </p>
       <!--Small blurb about us-->
-      <p class="text-gray-400 pt-10 text-center"> 
+      <p class="text-gray-300 pt-10 text-center"> 
       A web development venture assisting small to medium sized businesses grow through website and software solutions.
       </p>
       <!--Social media Icons-->
-      <p>
+      <p class="flex flex-row gap-6 pt-5">
+      <%= image_tag 'icons/linkedin' , class: "h-10"%>
+      <%= image_tag 'icons/github' , class: "h-10"%>
+      <!-- Add the following later:
+      Youtube
+      Upwork
+      Fiverr
+      Guru
+      -->
+      </p>
+      <!--More Links-->
+      <p class="text-white text-center pt-10 hidden md:block">
+        Projects | Articles | Contact
+      </p>
+      <!--Copyright-->
+      <p class="text-white text-center pt-10 hidden md:block">
+        Copyright <%= Date.today.year %> Tim Jedrek LLC
       </p>
     </div>
   </nav>
 
   <!--Main content stuff-->
   <main class="bg-slate-100 w-full">
-  hello world
+
   </main>
 </div>
