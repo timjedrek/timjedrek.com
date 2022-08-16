@@ -14,21 +14,21 @@
   <div class="px-10 pb-10">
     <div class="my-5">
       <%= form.label :name %>
-      <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <div class="my-5">
       <%= form.label :email %>
-      <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <div class="my-5">
-      <%= form.label :content %>
-      <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+      <%= form.label "How can we help?" %>
+      <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <div class="inline">
-      <%= form.submit "Send", class: "rounded-lg py-3 px-5 w-full bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+      <%= form.submit "Send", class: "rounded-lg py-3 px-5 w-full bg-red-800 text-white inline-block font-medium cursor-pointer hover:bg-red-700 active:bg-red-600" %>
     </div>
   </div>
 <% end %>
