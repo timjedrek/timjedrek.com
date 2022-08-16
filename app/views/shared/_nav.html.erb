@@ -8,14 +8,18 @@
 
     <!--Container for logo-->
     <div class="pt-10">
-      <%= image_tag 'main/logo-timjedrek' , class: "w-min invert grayscale brightness-0" %>
+      <%= link_to root_path do %>
+        <%= image_tag 'main/logo-timjedrek' , class: "w-min invert grayscale brightness-0 hover:invert-0 hover:grayscale-0 hover:brightness-200" %>
+      <% end %>
     </div>
 
     <!--Container for words and stuff-->
     <div class="flex flex-col items-center px-6">
       <!--Links-->
       <p class="text-white text-center pt-10">
-      Home | Client Websites | Example Sites <br>
+      <%= link_to "Home", root_path, class: "hover:text-red-400" %> | 
+      Client Websites | 
+      Example Sites <br>
       </p>
       <!--Small blurb about us-->
       <p class="text-gray-300 py-10 text-center text-sm"> 
@@ -38,7 +42,8 @@
     </p>
     <!--More Links-->
     <p class="text-white text-center pt-10 hidden lg:block">
-      Projects | Articles | Contact
+      Projects | Articles | 
+      <%= link_to "Contact", new_message_path, class: "hover:text-red-400" %>
     </p>
     <!--Copyright-->
     <p class="text-white text-center pt-10 hidden lg:block">
