@@ -12,6 +12,16 @@
   </head>
 
   <body>
+    <!--Full Page container-->
+    <div class="flex flex-col lg:flex-row ">
+      <!--First section / left section on desktop (navigation) -->
+      <%= render "shared/nav" %>
+
+      <!--Main content stuff-->
       <%= yield %>
+
+      <!--Footer (mobile only-->
+      <%= render "shared/footer" %>
+    </div>
   </body>
 </html>
