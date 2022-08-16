@@ -30,24 +30,6 @@
 
   <!--bottom part-->
   <div class="pb-10 flex flex-col items-center hidden lg:block">
-    <!--Social media Icons-->
-    <p class="flex flex-row justify-center gap-6">
-    <%= link_to "https://www.linkedin.com/in/tim-santos/" do%>
-      <%= image_tag 'icons/linkedin' , class: "h-10 hover:brightness-125"%>
-    <% end %>
-    <%= link_to "https://github.com/timjedrek" do %>
-      <%= image_tag 'icons/github' , class: "h-10 hover:brightness-125"%>
-    <% end %>
-    <!-- Add youtube? -->
-    </p>
-    <!--More Links-->
-    <p class="text-white text-center pt-10 hidden lg:block">
-      Projects | Articles | 
-      <%= link_to "Contact", new_message_path, class: "hover:text-red-400" %>
-    </p>
-    <!--Copyright-->
-    <p class="text-white text-center pt-10 hidden lg:block">
-      Copyright <%= Date.today.year %> Tim Jedrek LLC
-    </p>
+    <%= render "shared/nav_bottom"%>
   </div>
 </nav>

@@ -1,18 +1,5 @@
 <footer class="bg-red-800 lg:hidden">
   <div class="py-10 flex flex-col items-center">
-    <!--Social media Icons-->
-    <p class="flex flex-row justify-center gap-6">
-    <%= image_tag 'icons/linkedin' , class: "h-10"%>
-    <%= image_tag 'icons/github' , class: "h-10"%>
-    <!-- Add youtube? -->
-    </p>
-    <!--More Links-->
-    <p class="text-white text-center pt-10">
-      Projects | Articles | Contact
-    </p>
-    <!--Copyright-->
-    <p class="text-white text-center pt-10">
-      Copyright <%= Date.today.year %> Tim Jedrek LLC
-    </p>
+    <%= render "shared/nav_bottom"%>
   </div>
 </footer>
