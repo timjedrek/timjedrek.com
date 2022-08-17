@@ -5,9 +5,9 @@ class MessageMailer < ApplicationMailer
   #
   #   en.message_mailer.new_message.subject
   #
-  def new_message
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def new_message(message)
+    @message = message
+    
+    mail to: @message.email, subject: "Message Sent to Tim Jedrek LLC"
   end
 end

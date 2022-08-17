@@ -22,6 +22,7 @@ class MessagesController < ApplicationController
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
+    MessageMailer.new_message(@message).deliver_now
 
     respond_to do |format|
       if @message.save

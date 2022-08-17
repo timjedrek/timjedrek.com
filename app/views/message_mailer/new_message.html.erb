@@ -1,5 +1,17 @@
-<h1>Message#new_message</h1>
+<p>
+Hello <%= @message.name %>,
+</p>
 
 <p>
-  <%= @greeting %>, find me in app/views/message_mailer/new_message.html.erb
+The following message was sent to the team at Tim Jedrek LLC.
+</p>
+<blockquote>
+<em><%= @message.content %></em>
+</blockquote>
+<p>
+We will get back to you shortly.  We're excited to work with you soon!
+</p>
+<p>
+Sincerely,<br>
+The team at Tim Jedrek LLC
 </p>
