@@ -27,6 +27,16 @@
       <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
+    <div class="my-5">
+      <div>
+        Prove you're human and complete the sentence:
+      </div>
+      <div class="text-sm italic text-gray-500">
+        <%= sentence_generator%>
+      </div>
+      <%= form.email_field :sentence_validator, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
+    </div>
+
     <div class="inline">
       <%= form.submit "Send", class: "rounded-lg py-3 px-5 w-full bg-red-800 text-white inline-block font-medium cursor-pointer hover:bg-red-700 active:bg-red-600" %>
     </div>
