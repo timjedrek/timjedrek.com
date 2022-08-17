@@ -31,6 +31,11 @@ module ApplicationHelper
         id: 4,
         sentence: "The best thing since sliced ?????.",
         answer: "bread"
+      },
+      {
+        id: 5,
+        sentence: "Every ????? has a silver lining",
+        answer: "cloud"
       }
     ]
     random_key = rand(sentences.size)
