@@ -44,12 +44,17 @@
         A web development venture assisting small to medium sized businesses grow through website and software solutions.
         </p>
       </div>
+
+      <!--Mobile menu-->
+      <div class="lg:hidden">
+      <%= render "shared/mobile_menu"%>
+      </div>
+    </div>  
+    <% end %>
+    
+    <!--bottom part-->
+    <div class="pb-10 flex flex-col items-center hidden lg:block">
+      <%= render "shared/nav_bottom"%>
     </div>
-
-  <% end %>
-
-  <!--bottom part-->
-  <div class="pb-10 flex flex-col items-center hidden lg:block">
-    <%= render "shared/nav_bottom"%>
-  </div>
+  
 </nav>
