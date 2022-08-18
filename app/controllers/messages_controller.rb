@@ -6,6 +6,9 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
+  def confirmation
+  end
+
   # GET /messages/1 or /messages/1.json
   def show
   end
@@ -32,7 +35,7 @@ class MessagesController < ApplicationController
         if @message.save
           #this code works, but I want to comment it out for now during dev/testing
           #MessageMailer.new_message(@message).deliver
-          format.html { redirect_to new_message_path, notice: "Message was successfully created." }
+          format.html { redirect_to messages_confirmation_path }
           format.json { render :show, status: :created, location: @message }
         else
           format.html { render :new, status: :unprocessable_entity }
