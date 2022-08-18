@@ -15,7 +15,7 @@ module ApplicationHelper
     rand(10)
   end
 
-  # 6 sentences total as of right now...
+  # 10 sentences total as of right now...
   def sentence_storage
     sentences = [
       {
@@ -55,7 +55,7 @@ module ApplicationHelper
       },
       {
         id: 8,
-        sentence: "A ??????? is worth 1000 words",
+        sentence: "A ??????? is worth 1000 words.",
         answer: "picture"
       },
       {
