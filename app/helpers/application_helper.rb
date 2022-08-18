@@ -12,10 +12,10 @@ module ApplicationHelper
 
   # Needs to match number of sentences
   def random_number
-    rand(5)
+    rand(10)
   end
 
-  # 5 sentences total as of right now...
+  # 6 sentences total as of right now...
   def sentence_storage
     sentences = [
       {
@@ -40,8 +40,33 @@ module ApplicationHelper
       },
       {
         id: 5,
-        sentence: "Every ????? has a silver lining",
+        sentence: "Every ????? has a silver lining.",
         answer: "cloud"
+      },
+      {
+        id: 6,
+        sentence: "Time ????? when you're having fun.",
+        answer: "flies"
+      },
+      {
+        id: 7,
+        sentence: "No pain, no ????.",
+        answer: "gain"
+      },
+      {
+        id: 8,
+        sentence: "A ??????? is worth 1000 words",
+        answer: "picture"
+      },
+      {
+        id: 9,
+        sentence: "Kill two birds with one ?????.",
+        answer: "stone"
+      },
+      {
+        id: 10,
+        sentence: "The ????? bird gets the worm.",
+        answer: "early"
       }
     ]
     sentences
