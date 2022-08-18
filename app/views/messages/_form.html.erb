@@ -26,17 +26,17 @@
   <div class="px-10 pb-10">
     <div class="my-5">
       <%= form.label :name %>
-      <%= form.text_field :name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
+      <%= form.text_field :name, placeholder: "Your name", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <div class="my-5">
       <%= form.label :email %>
-      <%= form.email_field :email, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
+      <%= form.email_field :email, placeholder: "Your email", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <div class="my-5">
       <%= form.label "How can we help?" %>
-      <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
+      <%= form.text_area :content, placeholder: "Your message", rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
     <%# FORM VALIDATION%>
@@ -47,7 +47,7 @@
       <div class="text-sm italic text-gray-500">
         <%= sentence_generator(keygen) %>
       </div>
-      <%= form.text_field :validation_text, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
+      <%= form.text_field :validation_text, placeholder: "Your answer", class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
       <%= form.hidden_field :key, :value => keygen  %>
     </div>  
 
