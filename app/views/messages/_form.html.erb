@@ -1,4 +1,16 @@
 <%= form_with(model: message, class: "contents") do |form| %>
+  <%# FOR FORM VALIDATION %>
+  <% keygen = random_number %>
+
+  <%# FOR ERRORS %>
+  <div class="px-10">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg h-full" id="notice"><%= notice %></p>
+    <% end %>
+    <% if alert.present? %>
+      <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= alert %></p>
+    <% end %>
+  </div>
   <% if message.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
@@ -27,15 +39,17 @@
       <%= form.text_area :content, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
     </div>
 
+    <%# FORM VALIDATION%>
     <div class="my-5">
       <div>
         Prove you're human and complete the sentence:
       </div>
       <div class="text-sm italic text-gray-500">
-        <%= sentence_generator%>
+        <%= sentence_generator(keygen) %>
       </div>
       <%= form.text_field :validation_text, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
-    </div>
+      <%= form.hidden_field :key, :value => keygen  %>
+    </div>  
 
     <div class="inline">
       <%= form.submit "Send", class: "rounded-lg py-3 px-5 w-full bg-red-800 text-white inline-block font-medium cursor-pointer hover:bg-red-700 active:bg-red-600" %>

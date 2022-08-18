@@ -23,16 +23,26 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     
+    validation_text = @message.validation_text
+    #key = message_params[:key]
+    #selected_hash = helpers.sentence_storage(key)
 
-    respond_to do |format|
-      if @message.save
-        #this code works, but I want to comment it out for now during dev/testing
-        #MessageMailer.new_message(@message).deliver
-        format.html { redirect_to message_url(@message), notice: "Message was successfully created." }
-        format.json { render :show, status: :created, location: @message }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+    if validation_text == helpers.answer_check(@message.key)
+      respond_to do |format|
+        if @message.save
+          #this code works, but I want to comment it out for now during dev/testing
+          #MessageMailer.new_message(@message).deliver
+          format.html { redirect_to new_message_path, notice: "Message was successfully created." }
+          format.json { render :show, status: :created, location: @message }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @message.errors, status: :unprocessable_entity }
+        end
+      end
+
+    else  
+      respond_to do |format|
+        format.html { redirect_to new_message_path, alert: "Error: You did not complete the sentence correctly" }
       end
     end
   end
@@ -68,6 +78,6 @@ class MessagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def message_params
-      params.require(:message).permit(:name, :email, :content, :sentence_validator)
+      params.require(:message).permit(:name, :email, :content, :validation_text, :key)
     end
 end

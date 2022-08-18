@@ -10,7 +10,13 @@ module ApplicationHelper
     titles[rand(titles.size)]
   end
 
-  def sentence_generator
+  # Needs to match number of sentences
+  def random_number
+    rand(5)
+  end
+
+  # 5 sentences total as of right now...
+  def sentence_storage
     sentences = [
       {
         id: 1,
@@ -38,8 +44,16 @@ module ApplicationHelper
         answer: "cloud"
       }
     ]
-    random_key = rand(sentences.size)
-    array_key = sentences[random_key]
+    sentences
+  end
+
+  def sentence_generator(input)
+    array_key = sentence_storage[input]
     array_key[:sentence]
+  end
+
+  def answer_check(input)
+    answer_key = sentence_storage[input]
+    answer_key[:answer]
   end
 end
