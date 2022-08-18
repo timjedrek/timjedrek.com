@@ -4,7 +4,7 @@
     <!--top part-->
     <div class="flex flex-col items-center">
       <!--Container for Profile pic-->
-      <div class="pt-16 px-10">
+      <div class="pt-16 px-10 pb-10">
         <%= image_tag 'main/profile-pic' , class: "w-72 rounded-full border-8" %>
       </div>
 
@@ -31,7 +31,9 @@
       </div>
 
       <!--Container for logo-->
-      <%= render "shared/logo" %>
+      <div class="hidden lg:block">
+        <%= render "shared/logo" %>
+      </div>
 
       <!--Container for words and stuff-->
       <div class="flex flex-col items-center px-6">
