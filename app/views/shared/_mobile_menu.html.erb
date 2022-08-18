@@ -3,9 +3,9 @@
     <!--Logo-->
     <%= render "shared/logo" %>
     <!--Hamburger button-->
-    <button @click="open = ! open"  class="text-5xl hover:text-red-400">
-      ☰
-    </button>
+      <button x-ref="hardware" @click="open = ! open; $refs.hardware.style.display='none'" class="text-5xl hover:text-red-400">
+        ☰
+      </button>
   </div>
 
   <!--Container for mobile menu-->
@@ -20,7 +20,7 @@
       <li><%= link_to "Contact", new_message_path, class: "leading-10 hover:text-red-400" %></li>
     </ul>
     <!--Close button-->
-    <button @click="open = ! open" class="leading-10 hover:bg-red-700 border-2 w-min mt-5 px-5 rounded-full py-1">
+    <button @click="open = ! open; $refs.hardware.style.display='block'" class="leading-10 hover:bg-red-700 border-2 w-min mt-5 px-5 rounded-full py-1">
       X
     </button>
   </div>
