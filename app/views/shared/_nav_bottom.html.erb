@@ -1,19 +1,15 @@
-<!--Social media Icons-->
-<p class="flex flex-row justify-center gap-6">
-<%= link_to "https://www.linkedin.com/in/tim-santos/" do%>
-  <%= image_tag 'icons/linkedin' , class: "h-10 hover:brightness-125"%>
+<% if current_page?(controller: "home", action: "index") %>
+<!--ONLY FOR HOME PAGE-->
+  <!--Social media Icons-->
+  <%= render "shared/social_media_icons"%>
+  <!--More Links-->
+  <%= render "shared/bottom_links"%>
+  <!--Copyright-->
+  <%= render "shared/copyright" %>
+<% else %>
+<!--FOR ALL OTHER PAGES-->
+  <!--Social media Icons-->
+  <%= render "shared/social_media_icons"%>
+  <!--Copyright-->
+  <%= render "shared/copyright" %>
 <% end %>
-<%= link_to "https://github.com/timjedrek" do %>
-  <%= image_tag 'icons/github' , class: "h-10 hover:brightness-125"%>
-<% end %>
-<!-- Add youtube? -->
-</p>
-<!--More Links-->
-<p class="text-white text-center pt-10">
-  Projects | Articles | 
-  <%= link_to "Contact", new_message_path, class: "hover:text-red-400" %>
-</p>
-<!--Copyright-->
-<p class="text-white text-center pt-10">
-  Copyright <%= Date.today.year %> Tim Jedrek LLC
-</p>

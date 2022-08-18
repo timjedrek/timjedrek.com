@@ -1,32 +1,52 @@
 <nav class="flex flex-col items-center bg-red-800 lg:flex-auto lg:w-5/12 lg:justify-between">
-  <!--top part-->
-  <div class="flex flex-col items-center">
-    <!--Container for Profile pic-->
-    <div class="pt-16 px-10">
-      <%= image_tag 'main/profile-pic' , class: "w-72 rounded-full border-8" %>
+  <% if current_page?(controller: "home", action: "index") %>
+  <!--ONLY FOR HOME PAGE-->
+    <!--top part-->
+    <div class="flex flex-col items-center">
+      <!--Container for Profile pic-->
+      <div class="pt-16 px-10">
+        <%= image_tag 'main/profile-pic' , class: "w-72 rounded-full border-8" %>
+      </div>
+
+      <!--Container for logo-->
+      <%= render "shared/logo" %>
+
+      <!--Container for words and stuff-->
+      <div class="flex flex-col items-center px-6">
+        <!--Links-->
+        <%= render "shared/top_links"%>
+        <!--Small blurb about us-->
+        <p class="text-gray-300 py-10 text-center text-sm"> 
+        A web development venture assisting small to medium sized businesses grow through website and software solutions.
+        </p>
+      </div>
+    </div>
+  <% else%>
+  <!--FOR ALL OTHER PAGES-->
+    <!--top part-->
+    <div class="flex flex-col items-center">
+      <!--Container for Profile pic-->
+      <div class="hidden lg:block pt-16 px-10">
+        <%= image_tag 'main/profile-pic' , class: "w-72 rounded-full border-8" %>
+      </div>
+
+      <!--Container for logo-->
+      <%= render "shared/logo" %>
+
+      <!--Container for words and stuff-->
+      <div class="flex flex-col items-center px-6">
+        <!--Links-->
+        <div class="hidden lg:block">
+          <%= render "shared/top_links"%>
+        </div>
+        <!--Small blurb about us-->
+        <p class="hidden lg:block text-gray-300 py-10 text-center text-sm"> 
+        A web development venture assisting small to medium sized businesses grow through website and software solutions.
+        </p>
+      </div>
     </div>
 
-    <!--Container for logo-->
-    <div class="pt-10">
-      <%= link_to root_path do %>
-        <%= image_tag 'main/logo-timjedrek' , class: "w-min invert grayscale brightness-0 hover:invert-0 hover:grayscale-0 hover:brightness-200 hover:contrast-75" %>
-      <% end %>
-    </div>
-
-    <!--Container for words and stuff-->
-    <div class="flex flex-col items-center px-6">
-      <!--Links-->
-      <p class="text-white text-center pt-10">
-      <%= link_to "Home", root_path, class: "hover:text-red-400" %> | 
-      Client Websites | 
-      Example Sites <br>
-      </p>
-      <!--Small blurb about us-->
-      <p class="text-gray-300 py-10 text-center text-sm"> 
-      A web development venture assisting small to medium sized businesses grow through website and software solutions.
-      </p>
-    </div>
-  </div>
+  <% end %>
 
   <!--bottom part-->
   <div class="pb-10 flex flex-col items-center hidden lg:block">
