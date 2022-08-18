@@ -1,11 +1,11 @@
-<div class="pb-10 text-center items-center text-white flex flex-col ">
+<div x-data="{ open: false }" class="pb-10 text-center items-center text-white flex flex-col ">
   <!--Hamburger button-->
-  <div class="text-5xl hover:text-red-400">
+  <button @click="open = true;"  class="text-5xl hover:text-red-400">
     ☰
-  </div>
+  </button>
 
   <!--Container for mobile menu-->
-  <div class="flex flex-col items-center">
+  <div x-show="open" x-transition.duration.500ms class="flex flex-col items-center">
     <!--links-->
     <ul class="">
       <li><%= link_to "Home", root_path, class: "leading-10 hover:text-red-400" %></li>
@@ -16,8 +16,8 @@
       <li><%= link_to "Contact", root_path, class: "leading-10 hover:text-red-400" %></li>
     </ul>
     <!--Close button-->
-    <div class="leading-10 hover:bg-red-700 border-2 w-min mt-5 px-5 rounded-full py-1">
+    <button @click="open = ! open" class="leading-10 hover:bg-red-700 border-2 w-min mt-5 px-5 rounded-full py-1">
       X
-    </div>
+    </button>
   </div>
 </div>
