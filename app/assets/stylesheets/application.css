@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+
+ul { list-style-type: disc !important; margin-left: 1rem !important; }
+ol { list-style-type: decimal !important; margin-left: 1rem !important; }
