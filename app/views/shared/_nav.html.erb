@@ -1,5 +1,5 @@
 <nav class="flex flex-col items-center bg-red-800 lg:flex-auto lg:w-5/12 lg:justify-between">
-  <% if current_page?(controller: "home", action: "index") %>
+  <% if current_page?(root_url)  %>
   <!--ONLY FOR HOME PAGE-->
     <!--top part-->
     <div class="flex flex-col items-center">
@@ -21,7 +21,7 @@
         </p>
       </div>
     </div>
-  <% else%>
+  <% else %>
   <!--FOR ALL OTHER PAGES-->
     <!--top part-->
     <div class="flex flex-col items-center">
