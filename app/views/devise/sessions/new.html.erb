@@ -4,8 +4,6 @@
     <h1 class="font-bold text-4xl text-center py-10">Sign In</h1>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { data: { turbo: false} } ) do |form| %>
-      <%# FOR FORM VALIDATION %>
-      <% keygen = random_number %>
 
       <%# FOR ERRORS %>
       <div class="px-10">
@@ -15,6 +13,7 @@
         <% if alert.present? %>
           <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg h-full" id="alert"><%= alert %></p>
         <% end %>
+        <%= render "devise/shared/error_messages", resource: resource %>
       </div>
       <!--Container for fields/button-->
       <div class="px-10 pb-10">
