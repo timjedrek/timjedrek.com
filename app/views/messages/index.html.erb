@@ -1,14 +1,28 @@
-<main class="bg-slate-100 w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<main class="bg-zinc-50 w-full">
+<h1 class="text-4xl font-bold text-center py-10">Messages</h1>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Messages</h1>
-    <%= link_to 'New message', new_message_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+<% @messages.order(:created_at).reverse_each do | message | %>
+  <div class="border-2 my-3 mx-3 p-3 bg-white rounded-xl">
+    <div class="flex flex-row">
+      <div class="flex flex-row">
+        <div class="flex flex-col text-sm">
+          <div class="flex flex-row">
+            <div class="font-bold">ID</div>: <%= message.id %>
+          </div>
+          <div class="flex flex-row">
+            <div class="font-bold">Name</div>: <%= message.name %>
+          </div>
+          <div class="flex flex-row">
+            <div class="font-bold">Date</div>: <%= message.created_at.strftime("%b %e, %Y")%>
+          </div>
+          <div class="flex flex-row">
+            <div class="font-bold">Email</div>: <%= message.email %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-2">
+    <%= message.content %>
   </div>
-
-  <div id="messages" class="min-w-full">
-    <%= render @messages %>
-  </div>
+<% end %>
 </main>
