@@ -13,6 +13,12 @@
   </head>
 
   <body class="bg-red-800">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <!--Full Page container-->
     <div class="flex flex-col lg:flex-row">
       <!--First section / left section on desktop (navigation) -->

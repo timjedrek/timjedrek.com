@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  resources :pages
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  root "home#index"
+  devise_scope :user do
+    # Redirests signing out users back to sign-in
+    get "users", to: "devise/sessions#new"
+  end
+  
+  devise_for :users
 
   get '/messages/confirmation', to: 'messages#confirmation'
   resources :messages
+  
+  resources :pages
+
+  root "home#index"
+
+  
 end
