@@ -13,13 +13,6 @@
   </head>
 
   <body class="bg-red-800">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
     <% if user_signed_in? %>
       <!--USER MENU-->
       <%= render "shared/user_menu" %>
