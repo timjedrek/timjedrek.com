@@ -22,16 +22,16 @@
   </div>
 
     <!--Mobile Menu--->
-    <div x-show="usermenu" class="bg-stone-700 flex flex-col justify-start items-center pb-10">
-      <%= button_to 'Dashboard', messages_path, method: :get, class: "text-center text-stone-100 leading-10" %>
-      <%= button_to 'Invoices', messages_path, method: :get, class: "text-center text-stone-100 leading-10" %>
-      <%= button_to 'Customers', messages_path, method: :get, class: "text-center text-stone-100 leading-10" %>
-      <%= button_to 'New Page', new_page_path, method: :get, class: "text-center text-stone-100 leading-10" %>
-      <%= button_to 'Messages', messages_path, method: :get, class: "text-center text-stone-100 leading-10" %>
-      <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center text-stone-100 leading-10" %>
+    <div x-show="usermenu" x-transition.duration.200ms class="bg-stone-700 flex flex-col justify-start items-center pb-10">
+      <%= button_to 'Dashboard', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'Invoices', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'Customers', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'New Page', new_page_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'Messages', messages_path, method: :get, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
+      <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "text-center text-stone-100 hover:text-stone-400 leading-10" %>
 
     <!--Close button-->
-    <button @click="usermenu = ! usermenu;" class="leading-10 text-stone-100 hover:bg-stone-700 border-2 w-min mt-5 px-5 rounded-full py-1">
+    <button @click="usermenu = ! usermenu;" class="leading-10 text-stone-100 hover:text-stone-400 hover:bg-stone-700 border-2 hover:border-stone-400 w-min mt-5 px-5 rounded-full py-1">
       X
     </button>
 

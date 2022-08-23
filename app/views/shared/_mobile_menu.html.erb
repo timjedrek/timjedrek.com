@@ -9,7 +9,7 @@
   </div>
 
   <!--Container for mobile menu-->
-  <div x-show="open" class="flex flex-col items-center pt-3">
+  <div x-show="open" x-transition.duration.200ms class="flex flex-col items-center pt-3">
     <!--links-->
     <ul class="text-md">
       <li><%= link_to "Home", root_path, class: "leading-10 hover:text-red-400" %></li>
@@ -20,7 +20,7 @@
       <li><%= link_to "Contact", new_message_path, class: "leading-10 hover:text-red-400" %></li>
     </ul>
     <!--Close button-->
-    <button @click="open = ! open; $refs.hardware.style.display='block'" class="leading-10 hover:bg-red-700 border-2 w-min mt-5 px-5 rounded-full py-1">
+    <button @click="open = ! open; $refs.hardware.style.display='block'" x-transition.duration.200ms class="leading-10 border-2 w-min mt-5 px-5 rounded-full py-1 hover:text-red-400 hover:border-red-400 ">
       X
     </button>
   </div>
