@@ -1,0 +1,22 @@
+<div class="bg-zinc-50 w-full">
+  <div class="m-10">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-100 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <h1 class="text-4xl font-bold pb-5">Client Websites</h1>
+
+    <!--Feed of all the pages-->
+    <% @pages.order(:date).reverse_each do | page | %>
+      <%= link_to page do %>
+        <div class="py-5">
+          <h2 class="text-lg font-bold"><%= page.title %></h2>
+          <p class="text-gray-500">Created on: <%= page.date.strftime("%B %e, %Y") %></p>
+          <p class="text-sm text-gray-500" ><%= page.body.to_plain_text.truncate(90) %></p>
+        </div>
+      <% end %>
+    <% end %>
+    
+
+  </div>
+</div>
