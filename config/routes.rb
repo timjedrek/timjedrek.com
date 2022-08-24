@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :messages
 
   get 'client-websites', to: 'pages#client_websites'
+  get 'example-sites', to: 'pages#example_sites'
+  get 'projects', to: 'pages#projects'
+  get 'articles', to: 'pages#articles'
   resources :pages
   #get "/pages", to: "pages#index"
   #get "/pages/new", to: "pages#new"
