@@ -1,4 +1,5 @@
 <div id="<%= dom_id page %>" class="p-10">
+
   <p class="text-4xl font-bold">
     <%= page.title %>
   </p>
@@ -7,12 +8,17 @@
     <%= page.date.strftime("%B %e, %Y") %>
   </p>
 
+  <% if user_signed_in? %>
+    <p class="text-gray-500">
+      Category: <%= page.category %>
+    </p>
+    <div class="pb-5 flex flex-row text-gray-500 gap-3">
+      <%= link_to "Edit #{page.title}", edit_page_path(page), class: "hover:text-red-800" %> | 
+      <%= button_to "Delete #{page.title}", page_path(page), method: :delete, class: "hover:text-red-800" %>
+    </div>
+  <% end %>
+
   <p class="my-5">
     <%= page.body %>
   </p>
-
-  <%# if action_name != "show" %>
-    <%#= link_to "Show this page", page, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%#= link_to 'Edit this page', edit_page_path(page), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-  <%# end %>
 </div>
