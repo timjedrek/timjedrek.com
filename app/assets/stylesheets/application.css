@@ -14,8 +14,8 @@
  *= require_self
  */
 
-ul { list-style-type: disc !important; margin-left: 1rem !important; }
-ol { list-style-type: decimal !important; margin-left: 1rem !important; }
+ .trix-conten ul { list-style-type: disc !important; margin-left: 1rem !important; }
+ .trix-conten ol { list-style-type: decimal !important; margin-left: 1rem !important; }
 
 .trix-content a {
   color: #991b1b;
