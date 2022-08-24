@@ -4,7 +4,22 @@
       <p class="py-2 px-3 bg-green-100 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <h1 class="text-4xl font-bold pb-5">Client Websites</h1>
+    
+    <!--Header-->
+    <div class="mt-10">
+      <% if current_page?(client_websites_path) %>
+        <h1 class="text-4xl font-bold pb-5">Client Websites</h1>
+      <% end %>
+      <% if current_page?(example_sites_path) %>
+        <h1 class="text-4xl font-bold pb-5">Example Sites</h1>
+      <% end %>
+      <% if current_page?(projects_path) %>
+        <h1 class="text-4xl font-bold pb-5">Projects</h1>
+      <% end %>
+      <% if current_page?(articles_path) %>
+        <h1 class="text-4xl font-bold pb-5">Articles</h1>
+      <% end %>
+    </div>
 
     <!--Feed of all the pages-->
     <% @pages.order(:date).reverse_each do | page | %>

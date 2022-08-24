@@ -6,9 +6,21 @@
 
     <%= render @page %>
 
-    <% if @page.category == "Client Websites" %>
-    <%= link_to '↩ Back to Client Websites', client_websites_path, class: "text-red-800 hover:underline" %>
-    <% end %>
+    <!--Back Link-->
+    <div class="mt-10">
+      <% if @page.category == "Client Websites" %>
+        <%= link_to '↩ Back to Client Websites', client_websites_path, class: "text-red-800 hover:underline" %>
+      <% end %>
+      <% if @page.category == "Example Sites" %>
+        <%= link_to '↩ Back to Example Sites', example_sites_path, class: "text-red-800 hover:underline" %>
+      <% end %>
+      <% if @page.category == "Projects" %>
+        <%= link_to '↩ Back to Projects', projects_path, class: "text-red-800 hover:underline" %>
+      <% end %>
+      <% if @page.category == "Articles" %>
+        <%= link_to '↩ Back to Articles', articles_path, class: "text-red-800 hover:underline" %>
+      <% end %>
+    </div>
 
     <%#= link_to 'Edit this page', edit_page_path(@page), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <%#= button_to 'Destroy this page', page_path(@page), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
