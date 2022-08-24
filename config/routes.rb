@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get "users", to: "devise/sessions#new"
   end
   
-  devise_for :users, path: ''
+  devise_for :users, path: '', controllers: { registrations: "registrations" }
 
   get '/messages/confirmation', to: 'messages#confirmation'
   resources :messages
