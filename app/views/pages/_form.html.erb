@@ -13,25 +13,25 @@
 
   <div class="my-5">
     <%= form.label :title %>
-    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.text_field :title, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
   </div>
 
   <div class="my-5">
     <%= form.label :date %>
-    <%= form.date_field :date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.date_field :date, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
   </div>
 
 <div class="my-5">
     <%= form.label :category %>
-    <%= form.select :category, ['Client Websites','Example Sites','Projects','Articles'], class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.select(:category, ['Client Websites','Example Sites','Projects','Articles'], {}, {:class => 'block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800'}) %>
   </div>
 
   <div class="my-5">
     <%= form.label :body %>
-    <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.rich_text_area :body, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full focus:border-red-800 focus:ring-red-800" %>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.submit class: "rounded-lg py-3 px-5 bg-red-800 text-white inline-block font-medium cursor-pointer hover:bg-red-700" %>
   </div>
 <% end %>
