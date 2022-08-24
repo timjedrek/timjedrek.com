@@ -34,8 +34,7 @@ class MessagesController < ApplicationController
     if validation_text == helpers.answer_check(@message.key)
       respond_to do |format|
         if @message.save
-          #this code works, but I want to comment it out for now during dev/testing
-          #MessageMailer.new_message(@message).deliver
+          MessageMailer.new_message(@message).deliver
           format.html { redirect_to messages_confirmation_path, notice: @message.content}
           format.json { render :show, status: :created, location: @message }
         else
