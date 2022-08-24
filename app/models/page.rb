@@ -5,4 +5,6 @@ class Page < ApplicationRecord
 
   extend FriendlyId
   friendly_id :title, use: :slugged
+
+  scope :client_websites, -> {where('category = ?', 'Client Websites')}
 end

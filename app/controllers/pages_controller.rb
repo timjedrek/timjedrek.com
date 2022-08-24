@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   before_action :set_page, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [:show]
+  before_action :authenticate_user!, except: [:show, :client_websites]
+
+  def client_websites
+    @pages = Page.client_websites
+  end
 
   # GET /pages or /pages.json
   def index
