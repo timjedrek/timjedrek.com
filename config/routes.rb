@@ -8,8 +8,17 @@ Rails.application.routes.draw do
 
   get '/messages/confirmation', to: 'messages#confirmation'
   resources :messages
-  
-  resources :pages
+
+  get "/pages/:id", to: "pages#show"
+
+  #resources :pages
+  #get "/pages", to: "pages#index"
+  #get "/pages/new", to: "pages#new"
+  #get "/pages/:id", to: "pages#show"
+  #post "/pages", to: "pages#create"  # usually a submitted form
+  #get "/pages/:id/edit", to: "pages#edit"
+  #put "/pages/:id", to: "pages#update" # usually a submitted form
+  #delete "/pages/:id", to: "pages#destroy"
 
   root "home#index"
 
