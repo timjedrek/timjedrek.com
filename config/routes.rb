@@ -9,9 +9,7 @@ Rails.application.routes.draw do
   get '/messages/confirmation', to: 'messages#confirmation'
   resources :messages
 
-  get "/pages/:id", to: "pages#show"
-
-  #resources :pages
+  resources :pages
   #get "/pages", to: "pages#index"
   #get "/pages/new", to: "pages#new"
   #get "/pages/:id", to: "pages#show"
