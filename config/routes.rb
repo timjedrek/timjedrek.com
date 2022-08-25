@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :customers
+  devise_scope :customer do
+    # Redirests signing out users back to sign-in
+    get "customers", to: "devise/sessions#new"
+  end
+  
+  devise_for :customers, path: ''
+
   devise_scope :user do
     # Redirests signing out users back to sign-in
     get "users", to: "devise/sessions#new"
   end
   
-  devise_for :users, path: '', controllers: { registrations: "registrations" }
+  devise_for :users, path: 'admin/', controllers: { registrations: "registrations" }
 
   get '/messages/confirmation', to: 'messages#confirmation'
   resources :messages

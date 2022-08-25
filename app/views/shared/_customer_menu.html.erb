@@ -1,0 +1,37 @@
+<div x-data="{ usermenu: false }" class="">
+  <div class="w-full h-16 bg-slate-900 flex flex-row justify-between items-center">
+    <div class="pl-10 text-slate-100">
+      Welcome, <%= current_customer.email %>
+    </div>
+
+    <!--Hamburger button-->
+    <button @click="usermenu = ! usermenu;" class="text-slate-500 text-4xl pr-5 pb-1 hover:text-slate-700 lg:hidden">
+      ☰
+    </button >
+    
+    <!--desktop menu-->
+    <div class="hidden lg:block lg:flex lg:flex-row lg:pr-10 xl:pr-5">
+      <!--Button-->
+      <%= button_to 'Dashboard', root_path, method: :get, class: "text-center block p-3 px-6 mr-5 text-slate-900 bg-slate-300 rounded-lg hover:bg-slate-400" %>
+      <%= button_to 'Payment', root_path, method: :get, class: "text-center block p-3 px-6 mr-5 text-slate-900 bg-slate-300 rounded-lg hover:bg-slate-400" %>
+      <%= button_to 'Account History', root_path, method: :get, class: "text-center block p-3 px-6 mr-5 text-slate-900 bg-slate-300 rounded-lg hover:bg-slate-400" %>
+      <%= button_to 'Edit Profile', edit_customer_registration_path, method: :get, class: "text-center block p-3 px-6 mr-5 text-slate-900 bg-slate-300 rounded-lg hover:bg-slate-400" %>
+      <%= button_to 'Sign Out', destroy_customer_session_path, method: :delete, class: "text-center block p-3 px-6 mr-5 text-slate-900 bg-slate-300 rounded-lg hover:bg-slate-400" %>
+    </div>
+  </div>
+
+    <!--Mobile Menu--->
+    <div x-show="usermenu" x-transition.duration.200ms class="bg-slate-900 flex flex-col justify-start items-center pb-10">
+      <%= button_to 'Dashboard', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Payment', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Account History', root_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Edit Profile', edit_customer_registration_path, method: :get, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+      <%= button_to 'Sign Out', destroy_customer_session_path, method: :delete, class: "text-center text-slate-100 hover:text-slate-400 leading-10" %>
+
+    <!--Close button-->
+    <button @click="usermenu = ! usermenu;" class="leading-10 text-slate-100 hover:text-slate-400 border-2 hover:border-slate-400 w-min mt-5 px-5 rounded-full py-1">
+      X
+    </button>
+
+    </div>
+  </div>

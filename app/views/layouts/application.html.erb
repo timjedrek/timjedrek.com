@@ -18,6 +18,11 @@
       <%= render "shared/user_menu" %>
     <% end %>
 
+    <% if customer_signed_in? %>
+      <!--CUSTOMER MENU-->
+      <%= render "shared/customer_menu" %>
+    <% end %>
+
     <!--Full Page container-->
     <div class="flex flex-col lg:flex-row">
       <!--First section / left section on desktop (navigation) -->
