@@ -1,4 +1,10 @@
 <main class="bg-zinc-50 w-full">
+  <% if notice.present? %>
+    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)" class="m-10 py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg"  id="notice"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)" class="m-10 py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg"  id="alert"><%= alert %></p>
+  <% end %>
   <!--Another container for styling-->
   <div class="py-10 px-10">
     <!--Welcome-->
