@@ -15,9 +15,7 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'messages#new'
   get '/messages/confirmation', to: 'messages#confirmation'
-  get 'messages', to: 'messages#index'
-  delete "/messages/:id", to: "messages#destroy"
-  #resources :messages
+  resources :messages
 
   get 'client-websites', to: 'pages#client_websites'
   get 'example-sites', to: 'pages#example_sites'
