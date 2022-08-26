@@ -39,6 +39,12 @@
     <meta property="twitter:description" content="A web development venture assisting small to medium sized businesses grow through website and software solutions.">
     <meta property="twitter:image" content="<%= image_url('timjedrek.png') %>">
 
+    <!--Favicon--> 
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <% %w(57 72 76 114 120 144 152 180).each do |size| %>
+      <%= favicon_link_tag "apple-touch-icon-#{size}x#{size}.png", rel: 'apple-touch-icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
+
     <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
