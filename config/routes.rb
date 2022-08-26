@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   
   devise_for :users, path: 'admin/', controllers: { registrations: "registrations" }
 
+  get 'contact', to: 'messages#new'
   get '/messages/confirmation', to: 'messages#confirmation'
-  resources :messages
+  get 'messages', to: 'messages#index'
+  delete "/messages/:id", to: "messages#destroy"
+  #resources :messages
 
   get 'client-websites', to: 'pages#client_websites'
   get 'example-sites', to: 'pages#example_sites'
