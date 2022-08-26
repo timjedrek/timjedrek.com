@@ -2,12 +2,49 @@
 <html>
   <head>
     <title>Tim Jedrek - <%= random_title_text %></title>
+    <!-- WELCOME TO THE HOMEPAGE OF
+    
+          _____ _            _        _         _   
+        |_   _(_)_ __    _ | |___ __| |_ _ ___| |__
+          | | | | '  \  | || / -_) _` | '_/ -_) / /
+          |_| |_|_|_|_|  \__/\___\__,_|_| \___|_\_\
+                                            
+
+    
+    Nice to see you here.  Choose Tim Jedrek for all of your IT needs.  https://timjedrek.com/contact -->
+
+    <!--Meta Tags-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <meta name="title" content="Tim Jedrek - Website Design, E-Commerce, Enterprise Software">
+    <meta name="description" content="A web development venture assisting small to medium sized businesses grow through website and software solutions.">
+    <meta name="keywords" content="website, site, designer, maker, editor, WordPress, Wix, Square, Shopify, template, theme, e-commerce, sell, online, free, products, sales, marketing, St. Louis, Missouri, mobile, app, management, business, system, database, log, dashboard, records, invoice, accounting, talent, lifecycle, audit, quality, register, automate, automation, operation, HR, finance, cost, SEO">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Me">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Tim Jedrek - Website Design, E-Commerce, Enterprise Software">
+    <meta property="og:description" content="A web development venture assisting small to medium sized businesses grow through website and software solutions.">
+    <meta property="og:image" content="<%= image_url('timjedrek.png') %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Tim Jedrek - Website Design, E-Commerce, Enterprise Software">
+    <meta property="twitter:description" content="A web development venture assisting small to medium sized businesses grow through website and software solutions.">
+    <meta property="twitter:image" content="<%= image_url('timjedrek.png') %>">
+
+    <!--CSS-->
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+    <!--JS-->
     <%= javascript_importmap_tags %>
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
   </head>
@@ -28,10 +65,10 @@
       <!--First section / left section on desktop (navigation) -->
       <%= render "shared/nav" %>
 
-      <!--'Ze yeild-->
+      <!--Yield-->
       <%= yield %>
 
-      <!--Footer (mobile only-->
+      <!--Footer (mobile only)-->
       <%= render "shared/footer" %>
     </div>
   </body>
