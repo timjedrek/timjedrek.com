@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://timjedrek.com</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://timjedrek.com/client-websites</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>  
+  <url>
+    <loc>https://timjedrek.com/example-sites</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://timjedrek.com/projects</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://timjedrek.com/articles</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://timjedrek.com/contact</loc>
+    <lastmod>2022-08-25</lastmod>
+  </url>
+</urlset>
