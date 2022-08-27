@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     
-    validation_text = @message.validation_text
+    validation_text = @message.validation_text.downcase
     #key = message_params[:key]
     #selected_hash = helpers.sentence_storage(key)
 
