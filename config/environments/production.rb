@@ -102,6 +102,6 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "apikey",
-    password: "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"
+    password: ENV["SENDGRID_API_KEY"]
   }
 end
