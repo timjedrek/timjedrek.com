@@ -2,6 +2,7 @@
   <% if blob.representable? %>
     <div class="flex flex-row justify-center">
       <%= image_tag blob.url %>
+      <%# This doesnt work in production.  It displays a link to active storage representations redirect but for some reason, it doesnt redirect to S3.  Weird Active storage issue. %>
       <%#= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]), class: "" %>
     </div>
   <% end %>
