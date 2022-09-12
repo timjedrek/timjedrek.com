@@ -1,15 +1,17 @@
 <div x-data="{ open: false }" class="pb-2 text-center items-center text-white flex flex-col fixed bg-red-800 w-full left-0">
-  <div class="flex flex-row justify-between">
+  <div class="flex flex-row justify-between w-full">
     <!--Logo-->
-    <%= render "shared/logo" %>
+    <div class="ml-3">
+      <%= render "shared/logo" %>
+    </div>
     <!--Hamburger button-->
-      <button x-ref="hardware" @click="open = ! open" class="text-4xl text-red-400 hover:text-red-500">
+      <button x-ref="hardware" @click="open = ! open" class="text-4xl text-red-400 hover:text-red-500 mr-3">
         ☰
       </button>
   </div>
 
   <!--Container for mobile menu-->
-  <div x-show="open" x-transition.duration.200ms class="flex flex-col items-center justify-center mt-20 pb-32 fixed bg-red-800 w-screen h-screen">
+  <div x-show="open" x-transition.duration.200ms class="flex flex-col items-center justify-center mt-24 pb-32 fixed bg-red-800 w-screen h-screen">
     <!--links-->
     <ul class="text-md">
       <li><%= link_to "Home", root_path, class: "leading-10 hover:text-red-400" %></li>
