@@ -336,9 +336,11 @@
       We're excited to meet you and learn more about your business.  We can't wait to get your business and your ideas out onto the internet.  Talk to you soon!
     </div>
 
-    <div class="bg-red-800 hover:bg-red-700 w-32 text-white rounded-lg text-center px-3 py-3 m-5">
-    <%= link_to "Contact Us", contact_path %>
-    </div>
+    <%= link_to contact_path do %>
+      <div class="bg-red-800 hover:bg-red-700 w-32 text-white rounded-lg text-center px-3 py-3 m-5">
+        Contact Us
+      </div>
+    <% end %>
   </div>
 
 </main>
