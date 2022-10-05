@@ -1,346 +1,102 @@
 <main class="bg-zinc-50 w-full">
-  <% if notice.present? %>
-    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)" class="m-10 py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg"  id="notice"><%= notice %></p>
-  <% end %>
-  <% if alert.present? %>
-    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 3000)" class="m-10 py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg"  id="alert"><%= alert %></p>
-  <% end %>
-  <!--Another container for styling-->
-  <div class="py-10 px-10">
-    <!--Welcome-->
-    <h1 class="font-bold text-4xl">Howdy friend.  Welcome!</h1>
-    <p class="py-7">
-      My name is Tim Santos and I started the company, Tim Jedrek, to serve small to medium sized businesses create their online presence and implement software solutions.  
-    </p>
-    <p class="pb-7">
-      We specialize in the following: <a href="#webdesign" class="text-red-800 hover:underline">Website Design</a>, <a href="#ecommerce" class="text-red-800 hover:underline">E-Commerce</a>, and <a href="#enterprise" class="text-red-800 hover:underline">Enterprise Software</a>
-    </p>
-
-    <!--Website Design-->
-    <h2 class="font-bold text-3xl" id="webdesign">Website Design</h2>
-    <p class="py-7">
-      Websites are an important part of any business and are the digital business card of the company. Every business's online web presence, regardless of industry, will have a massive impact on its success. Many businesses don't realize that a majority of their customers will look for and visit their website before making a purchasing decision. Having a website can be a make or break for generating more revenue.
-    </p>
-    <h3 class="font-semibold text-xl">Building Credibility and Brand Awareness</h3>
-    <p class="pb-7">
-      Everyone has an option in choosing which company they will spend their money with. Chances are, prior making a purchase, your customers are looking and evaluating other businesses in the area and most look online to aid them in their decision. One way you can stand out is by having a website that looks good and clearly communicates quality information to your consumers.  Without a website, people may question your legitimacy as a business. Having a website is an opportunity to make a great first impression and give people comfort that you're a real business. Establishing an online presence is a great way to showcase your brand, establish who you are, and increase your chances of you closing that next sale.
-    </p>
-
-    <h3 class="font-semibold text-xl">Saving You Time and Providing Excellent Customer Service</h3>
-    <p class="pb-7">
-      Many businesses get calls from prospects or existing customers asking simple questions about location and hours of operation. If you miss a call, the customer is left unhappy. A website can help customers find useful information without needing to call, which ultimately provides an all-around better member experience.
-    </p>
-
-    <h3 class="font-semibold text-xl">What Makes Us Different</h3>
-    <p class="pb-7">
-      Everyday technology is evolving and publishing a website has become easier than ever.  You may have heard of DIY solutions like Wix, Squarespace, Weebly, Go Daddy, and WordPress.  These are all great options and can be cost effective, however these platforms while at first may seem easy to use, over time problems start to arise.  Our websites are all handcrafted and coded line by line to optimize efficiency and improve quality.
-    </p>
-    <p class="pb-7">
-      <b>Security</b><br>
-      Because DIY and no-code platforms are so widely used, without the technical expertise, your site will be constantly under attack from spambots, malware, and viruses.  Once these malicious scripts get ahold of your domain name and server, not only will they compromise your website, they can spread to your personal computer & phone and then access your passwords, emails, and even your bank account information.  Tim Jedrek does not use WordPress or any other DIY platforms and instead, each website we make is handcrafted and coded line by line which will divert away most attacks.  In addition, we employ different security protocols including proprietary verification techniques, recaptcha, and two factor authentication.  
-    </p>
-    <p class="pb-7">
-      <b>Customization, Layout, and Design</b><br>
-      Using drag and drop and no-code solutions becomes tedious to get your site looking the way you actually want it to.  Especially as most customers will first view your site on their phone, your design can become completely destroyed when the screen size changes.  Tim Jedrek takes this into account and will develop your site using modern web technologies to make your site look great in whatever screen your customer is viewing your website through.  We take extra consideration to ensure that the user experience when viewing your site is intuitive, creative, and dynamic.  Our designs are simple, modern, professional, and palatable. 
-    </p>
-    <p class="pb-7">
-      <b>Speed</b><br>
-      Using no-code and DIY solutions comes with a cost in performance and speed.  These platforms come overloaded with bloatware and excess code which in turn brings longer load times.  Since our websites are made from scratch, your website is able to be loaded quickly.  In addition to the software running the site, your web host also plays a big factor in page load times.  Tim Jedrek has done the research to find the most affordable and fastest service providers.  We do not use shared hosting like Bluehost or Hostgator which serves thousands of clients and gives the bare minimum.  Instead, we use Linode, Amazon, and Google to deploy your site on a dedicated private server in the cloud.  This means that your customers will be able to access your site quickly and rapidly.
-    </p>
-    <p class="pb-7">
-      <b>Cost</b><br>
-      Tim Jedrek is an affordable high quality solution to get a handcrafted website that is designed to your liking.  As your business scales and your traffic increases, we will not increase your price.  Other platforms take advantage of when there is increased traffic and demand higher prices.  We have chosen to honor the price that has been set and we will never increase your costs.  That's our guarantee to you.  
-    </p>
-    <h3 class="font-semibold text-xl">Let's Get to Work!</h3>
-    <p class="pb-7">
-    Every client we have is special to us and we want to take the time to really get to know you and your business.  Our job is to make your business grow and scale and it is our mission and vision to see you succeed.  We offer two plans to get your website up and running.  The <a href="#webdesign-partner" class="text-red-800 hover:underline">partnership package</a> is our monthly plan and we continuously monitor and update your site for as long as we are partners.  Whatever you need, we are here for you!  For those who would like to opt out of our monthly plan, we offer our <a href="#webdesign-exclusive" class="text-red-800 hover:underline">exclusive package</a> which is a one time payment.  Tim Jedrek will design and deploy your site and then give you the training and tools needed to keep it up and running.  Even after your website is deployed, we are still here ready for you and you can always give us a buzz when you need additional training and help.
-    </p>
-
-    <!--boxes flex container -->
-    <div class="pt-10 flex flex-col lg:flex-row lg:gap-10 lg:justify-center">
-      <!--box1 - Partnership Package-->
-      <div class="mb-10 bg-white border-2 rounded-lg lg:w-1/3 hover:-translate-y-1 hover:scale-105 hover:shadow-xl ease-in-out delay-150 duration-300" id="webdesign-partner">
-        <div class="">
-          <h3 class="font-semibold text-xl p-5">Partnership Package</h3>
-          <p class="text-gray-600 py-10 px-5">
-            Let's become business partners.  We build your website 100% and maintain it.  We are here for you.  
-          </p>
-          <!--spacers-->
-          <p class="hidden lg:block 2xl:hidden"><br></p>
-          <p class="hidden lg:block"><br></p>
-          <!--pricing-->
-          <p class="font-bold text-center text-xl">$150 per month</p>
-          <p class="text-center text-gray-500 text-sm pb-10">+ taxes and fees</p>
-        </div>
-        <hr>
-        <div class="">
-          <h4 class="py-10 px-5">What's included</h4>
-          <div class="flex flex-row">
-          <ul class="pb-10 px-5">
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>24/7 365 customer service</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Unlimited revisions</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Logo design</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Photo sourcing</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Contact Form</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Social Media Integration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Google Maps</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Blog / News / Posts functionality</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mailing list plugin</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>SEO implementation</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mobile Responsive</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Domain and hosting</div></li>
-            
-          </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--box2 - Exclusive Package-->
-      <div class="mb-10 bg-white border-2 rounded-lg lg:w-1/3 hover:-translate-y-1 hover:scale-105 hover:shadow-xl ease-in-out delay-150 duration-300" id="webdesign-exclusive">
-        <div class="">
-          <h3 class="font-semibold text-xl p-5">Exclusive Package</h3>
-          <p class="text-gray-600 py-10 px-5">
-            We will build your site 100% and give you the tools and training to maintain and operate your site.  You will have full control of your website. 
-          </p>
-          <p class="font-bold text-center text-xl">$1500 for entire site</p>
-          <p class="text-center text-gray-500 text-sm pb-10">+ taxes and fees</p>
-        </div>
-        <hr>
-        <div class="">
-          <h4 class="py-10 px-5">What's included</h4>
-          <div class="flex flex-row">
-          <ul class="pb-10 px-5">
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>24/7 365 customer service</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Unlimited revisions during development</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Logo design</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Photo sourcing</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Contact Form</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Social Media Integration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Google Maps</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Blog / News / Posts functionality</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mailing list plugin</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>SEO implementation</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mobile Responsive</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Training on procuring a domain and host</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Domain Name Server Configuration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Training to maintain and operate your website after website is completed</div></li>
-          </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--E-Commerce-->
-    <h2 class="font-bold text-3xl" id="ecommerce">E-Commerce</h2>
-    <p class="py-7">
-    Your customers look online to place orders and schedule appointments.  Let's create a user experience that leads all the way to check out.  Getting your online store online for customers is easier said than done.  If you've tried DIY solutions like Shopify, Square, Wix, Go Daddy, and WooCommerce and you got yourself scratching your head.   Or, if you've tried other E-Commerce agencies and found them difficult to work with; Tim Jedrek is here to get your store online and in front of customers.
-    </p>
-    <p>
-    We offer two services to get your online store up and running:  <a href="#ecommerce-partner" class="text-red-800 hover:underline">The Partnership Package</a> and <a href="#ecommerce-exclusive" class="text-red-800 hover:underline">The Exclusive Package</a>.
-    </p>
-    <!--boxes flex container -->
-    <div class="pt-10 flex flex-col lg:flex-row lg:gap-10 lg:justify-center">
-      <!--box1 - Partnership Package-->
-      <div class="mb-10 bg-white border-2 rounded-lg lg:w-1/3 hover:-translate-y-1 hover:scale-105 hover:shadow-xl ease-in-out delay-150 duration-300" id="ecommerce-partner">
-        <div class="">
-          <h3 class="font-semibold text-xl p-5">Partnership Package</h3>
-          <p class="text-gray-600 py-10 px-5">
-            Let's become business partners.  We build your online store 100% and maintain it.  We are here for you.  
-          </p>
-          <!--spacers-->
-          <p class="hidden lg:block"><br></p>
-          <!--pricing-->
-          <p class="font-bold text-center text-xl">$225 per month</p>
-          <p class="text-center text-gray-500 text-sm pb-10">+ taxes and fees</p>
-        </div>
-        <hr>
-        <div class="">
-          <h4 class="py-10 px-5">What's included</h4>
-          <div class="flex flex-row">
-          <ul class="pb-10 px-5">
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>24/7 365 customer service</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Unlimited revisions</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Logo design</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Photo sourcing</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Product, cart, and checkout pages</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>PayPal or Stripe payment gateways</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Contact Form</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Social Media Integration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Google Maps</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Blog / News / Posts functionality</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mailing list plugin</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>SEO implementation</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mobile Responsive</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Domain and hosting</div></li>
-          </ul>
-          </div>
-        </div>
-      </div>
-
-      <!--box2 - Exclusive Package-->
-      <div class="mb-10 bg-white border-2 rounded-lg lg:w-1/3 hover:-translate-y-1 hover:scale-105 hover:shadow-xl ease-in-out delay-150 duration-300" id="ecommerce-exclusive">
-        <div class="">
-          <h3 class="font-semibold text-xl p-5">Exclusive Package</h3>
-          <p class="text-gray-600 py-10 px-5">
-            We will build your online store 100% and give you the tools and training to maintain and operate your online store.  You will have full control of your online store. 
-          </p>
-          <p class="font-bold text-center text-xl">$2500 for entire store</p>
-          <p class="text-center text-gray-500 text-sm pb-10">+ taxes and fees</p>
-        </div>
-        <hr>
-        <div class="">
-          <h4 class="py-10 px-5">What's included</h4>
-          <div class="flex flex-row">
-          <ul class="pb-10 px-5">
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>24/7 365 customer service</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Unlimited revisions during development</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Logo design</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Photo sourcing</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Product, cart, and checkout pages</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>PayPal or Stripe payment gateways</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Contact Form</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Social Media Integration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Google Maps</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Blog / News / Posts functionality</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mailing list plugin</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>SEO implementation</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Mobile Responsive</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Training on procuring a domain and host</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Domain Name Server Configuration</div></li>
-            <li><div class="flex flex-row"><div class="text-green-500 pr-3">✓</div>Training to maintain and operate your website after website is completed</div></li>
-            
-          </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!--Enterprise Software-->
-    <h2 class="font-bold text-3xl" id="enterprise">Enterprise Software</h2>
-    <p class="py-7">
-      Custom software tailored for your business.  As your business grew the costs and complexity grew with it.  Using multiple platforms, tracking data in Excel, and using paper records becomes burdensome over time.  Tim Jedrek will create your enterprise software to simplify all of your operations.  Whichever industry you are in, we will ensure that your electronic records comply to regulatory requirements.
-    </p>
-    <p class="pb-7">
-      Every business is different and we work with you to understand your operations, procedures, and records.  We explore different options to automate your processes and save you time and money.  We listen to you and implement all of the features you think would be beneficial for your business.
-    </p>
-
-    <!--Box with list-->
-    <div class="bg-white border-2 rounded-lg">
-      <!--Container for sections-->
-      <div class="flex flex-col lg:flex-row">
-        <!--Leftside / header-->
-        <div class="px-5 pt-5 flex flex-col justify-center lg:items-center lg:text-center lg:w-3/5">
-          <p class="text-sm">Starting at</p>
-          <p class="font-bold text-xl">$300 per month</p>
-          <p class="text-gray-500 text-sm pb-10">+ initial setup, taxes, and fees</p>
-        </div>
-
-        <!--list-->
-        <div class="px-5 pb-10 lg:pt-10">
-          <div class="pb-5">
-            Some examples of what is possible:
-          </div>
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Simplified Admin Dashboard</p>
-              <p class="text-sm text-gray-500">Track your KPIs, get an instant overview of your P/L, see outstanding orders. </p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Customer Interface</p>
-              <p class="text-sm text-gray-500">Customers can create a profile, place orders, view their order status, and purchase history.  Create a ticketing system to manage customer service.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Invoicing and Customer Accounting</p>
-              <p class="text-sm text-gray-500">Implement the functionality of accounting software like QuickBooks and truly integrate your financials and customer accounts with your databases.  Remove the requirement to maintain multiple platforms and streamline your business into one software package.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Inventory Management</p>
-              <p class="text-sm text-gray-500">Create a system to track all of your raw materials and finished products.  Assign item numbers, lots, batches, expiration dates, and more.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Auditing</p>
-              <p class="text-sm text-gray-500">Create electronic forms for your team members to fill out on a tablet and take it to the production floor.  Generate records and attach photos.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Records Database</p>
-              <p class="text-sm text-gray-500">Create, edit, delete, and review records.  Sort by names, IDs, dates.  Easily search and find the record you are looking for.  </p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Client / Patient / Lab Information Management System</p>
-              <p class="text-sm text-gray-500">Document electronically status, notes, and issues.  Make it easy for your team to enter data into your system.  Arm your team with the tools to make accurate and profitable business decisions.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Human Resource Management System</p>
-              <p class="text-sm text-gray-500">Manage your employee lifecycle.  Implement systems for talent acquisition, talent management, payroll, and timecards.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Maintenance History and Logs</p>
-              <p class="text-sm text-gray-500">Create a system to track preventative maintenance records.  Ensure your equipment and your fleet is up to date on mainteance.</p>
-            </div>
-          </div>
-
-
-          <div class="flex flex-row">
-            <div class="text-green-500 pr-3">✓</div>
-            <div class="flex flex-col">
-              <p>Customized Reporting</p>
-              <p class="text-sm text-gray-500">Data drives the business.  Discover where your business needs attention and where your business is profiting the most from.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
+  <!--header-->
+  <div class=" py-10">
+    <h1 class="text-4xl font-bold text-center">Web Development and Design for Local Businesses</h1>
   </div>
-  <!--Call to Action-->
-  <div class="rounded-lg mb-10 mx-10 bg-white border-2 flex flex-col items-center">
-    
-    <div class="pt-5 px-5 text-center text-2xl font-bold">
-      Let's get started today!
-    </div>
-    <div class="pt-5 px-5 text-center text-gray-500 ">
-      We're excited to meet you and learn more about your business.  We can't wait to get your business and your ideas out onto the internet.  Talk to you soon!
-    </div>
 
-    <%= link_to contact_path do %>
-      <div class="bg-red-800 hover:bg-red-700 w-32 text-white rounded-lg text-center px-3 py-3 m-5">
-        Contact Us
+  <div class="grid place-items-center ">
+    <p class="lg:w-2/5 w-4/5 text-center pb-5">
+      No pagebuilders or WordPress themes.  Our websites are 100% coded line by line creating exceptional results.
+    </p>
+    <%= link_to contact_path, class: "" do %>
+      <div class="bg-red-800 hover:bg-red-700 w-full text-white rounded-lg text-center px-3 py-3">
+        Get Started Today!
       </div>
     <% end %>
+  </div>
+
+  <div class=" py-10">
+    <h2 class="text-3xl font-bold text-center">What We Do</h2>
+  </div>
+
+  <div class="grid place-items-center">
+    <p class="lg:w-3/5 w-4/5 text-center pb-20">
+      We specialize in web design and development for small to medium businesses.  Every website we make is coded from scratch to ensure optimum performance which will help bring more customers to your site and increase revenue.
+    </p>
+  </div>
+
+  <!--Three columns-->
+  <div class="lg:flex lg:flex-row mx-5 text-center">
+    <div class="lg:w-1/3 px-3 flex flex-col items-center pb-20">
+      <%= image_tag "smartphone.png", class: "h-16" %>
+      <h3 class="font-bold text-xl py-5">Mobile First Design</h3>
+      <p class="">
+        Your site is designed mobile first and then further customized to work on tablets and desktops.
+      </p>
+    </div>
+    <div class="lg:w-1/3 px-3 flex flex-col items-center pb-20">
+      <%= image_tag "responsive.png", class: "h-16" %>
+      <h3 class="font-bold text-xl py-5">Responsive Designs</h3>
+      <p class="">
+        Your website will fit all screens.  Phones, tablets, and PCs.  Your customers can view your site from any device.
+      </p>
+    </div>
+    <div class="lg:w-1/3 px-3 flex flex-col items-center pb-20">
+      <%= image_tag "google.png", class: "h-16" %>
+      <h3 class="font-bold text-xl py-5">Optimized for Search</h3>
+      <p class="">
+        62.4% of all internet traffic comes from mobile devices.  We optimize your site to perform and to be on the top of Google search results. 
+      </p>
+    </div>
+  </div>
+
+  <div class="mb-20 mx-5">
+    <h2 class="text-3xl font-bold text-center">$0 to Get Started, $150 a Month</h2>
+  </div>
+
+  <!--2 columns-->
+  <div class="flex flex-col lg:flex-row lg:items-center">
+    <div class="lg:w-1/2 p-5">
+      <p>
+        Free to get started on a standard 5 page small business site.  Start with a free consultation.  We'll base the design off the needs of your business.  Maps, mailing lists, contact forms, admin interfaces all included.
+      </p>
+
+      <p class="py-5">
+        If you need more, we do custom pricing based on the complexity of the project, number of additional pages, and work involved.
+      </p>
+    </div>
+    
+    <div class="lg:w-1/2 p-5">
+      <ul class="pb-10 pr-5">
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="text-green-500 pr-3">✓</div>
+            <span class="font-bold">
+              Hosting and Domain Included
+            </span> 
+          </div>
+            <p class="pl-7">We'll take care of procuring a cloud host provider and securing a domain name.</p>
+        </li>
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="text-green-500 pr-3">✓</div>
+            <span class="font-bold">
+              Unlimited Revisions
+            </span> 
+          </div>
+            <p class="pl-7">Tim Jedrek is your on call web design partner.  Call us anytime and we will get your redesigns done the same day </p>
+        </li>
+        <li class="pb-5">
+          <div class="flex flex-row">
+            <div class="text-green-500 pr-3">✓</div>
+            <span class="font-bold">
+              Web Design and Development
+            </span> 
+          </div>
+            <p class="pl-7"></p>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </main>
