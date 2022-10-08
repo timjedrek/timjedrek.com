@@ -108,14 +108,14 @@
     <h2 class="text-3xl font-bold text-center">Our Portfolio</h2>
   </div>
 
-  <!--Three columns-->
+  <!--Three columns for porfolio-->
   <div class="lg:flex lg:flex-row mx-5 text-center">
     <div class="lg:w-1/3 px-3 pb-5 mx-3 mb-5 lg:mb-20 flex flex-col items-center justify-between rounded-xl border-2 drop-shadow-sm">
       <div class="flex flex-col items-center">
         <h3 class="font-bold text-xl py-5">99 Lawn Care</h3>
         <%= image_tag "99lawncare.jpg", class: "h-64" %>
         <p class="py-5">
-          99 Lawn Care are lawn care professionals servicing the St. Louis, Missouri area.
+          99 Lawn Care is a professional lawn care business servicing the St. Louis, Missouri area.
         </p>
       </div>
       <%= link_to "https://99lawncare.com", target: :blank, class:"w-full grid place-items-center" do %>
@@ -146,6 +146,28 @@
         <div class="py-3 bg-red-800 hover:bg-red-700 text-white rounded-lg text-center text-xs w-4/5">Visit Belleville Pancake House</div>
       <% end %>
     </div>
+  </div>
+
+  <!--Who we are-->
+  <div class="mt-12 mb-20 mx-5">
+    <h2 class="text-3xl font-bold text-center">Who we are</h2>
+  </div>
+
+  <div class="grid place-items-center">
+    <p class="lg:w-3/5 w-4/5 text-center pb-10">
+      My name is Tim.  I am a web developer from St. Louis.  I started programming when I was a teenager and taught myself how to code. Over the past year I've sharpened my skills to create websites and software the right way.
+    </p>
+  </div>
+
+  <div class="px-10 pb-10 grid place-items-center">
+    <%= image_tag 'profilepic4.jpg' , class: "w-72 rounded-full border-8 border-neutral-300" %>
+    <h4 class="text-xl font-bold pt-5">Tim Jedrek</h4>
+    <div>Founder / Developer</div>
+  </div>
+
+  <!--Blog Articles-->
+  <div class="mt-12 mb-20 mx-5">
+    <h2 class="text-3xl font-bold text-center">Blog Articles</h2>
   </div>
 
 </main>
