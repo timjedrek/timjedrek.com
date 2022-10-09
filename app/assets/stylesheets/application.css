@@ -27,6 +27,18 @@ trix-editor ol { list-style-type: decimal !important; margin-left: 1rem !importa
   text-decoration: underline;
 }
 
+trix-editor a {
+  color: #991b1b;
+}
+
+.trix-content h1 {
+  font-size: 2em;
+}
+
+trix-editor h1 {
+  font-size: 2em;
+}
+
 trix-editor pre {
   display: inline-block;
   width: 100%;
