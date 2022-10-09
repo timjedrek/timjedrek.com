@@ -4,5 +4,6 @@ Disallow: /sign_in
 Disallow: /sign_up
 Disallow: /admin
 Disallow: /users
+Disallow: /example-sites
 
 Sitemap: https://timjedrek.com/sitemap.xml

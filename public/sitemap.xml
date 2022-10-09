@@ -2,26 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://timjedrek.com</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-10-09</lastmod>
+  </url>
+  <url>
+    <loc>https://timjedrek.com/pages/are-custom-coded-websites-better-than-wordpress</loc>
+    <lastmod>2022-10-09</lastmod>
+  </url>
+  <url>
+  <url>
+    <loc>https://timjedrek.com/pages/my-story-and-why-i-started-tim-jedrek</loc>
+    <lastmod>2022-10-09</lastmod>
   </url>
   <url>
     <loc>https://timjedrek.com/client-websites</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-10-09</lastmod>
   </url>  
   <url>
-    <loc>https://timjedrek.com/example-sites</loc>
-    <lastmod>2022-08-25</lastmod>
-  </url>
-  <url>
     <loc>https://timjedrek.com/projects</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-10-09</lastmod>
   </url>
   <url>
     <loc>https://timjedrek.com/articles</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-10-09</lastmod>
   </url>
   <url>
     <loc>https://timjedrek.com/contact</loc>
-    <lastmod>2022-08-25</lastmod>
+    <lastmod>2022-10-09</lastmod>
   </url>
 </urlset>
