@@ -36,7 +36,7 @@
       </div>
 
       <!--Container for words and stuff-->
-      <div class="flex flex-col items-center px-6">
+      <div class="hideen lg:block flex flex-col items-center px-6">
         <!--Small blurb about us-->
         <p class="hidden lg:block text-gray-300 py-10 text-center text-sm"> 
         A web development venture assisting small to medium sized businesses grow through website and software solutions.
@@ -48,8 +48,8 @@
       </div>
 
       <!--Mobile menu-->
-      <div class="lg:hidden">
-      <%= render "shared/mobile_menu"%>
+      <div class="lg:hidden drop-shadow-2xl">
+        <%= render "shared/mobile_menu"%>
       </div>
     </div>  
     <% end %>
